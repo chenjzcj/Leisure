@@ -155,8 +155,10 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
                 .withCompactStyle(false)
                 .withHeaderBackground(R.drawable.header)
                 .addProfiles(new ProfileDrawerItem().withIcon(R.drawable.logo)
-                        .withEmail(getString(R.string.author_email))
-                        .withName(getString(R.string.author_name)))
+                        //.withEmail(getString(R.string.author_email))
+                        .withEmail("")
+                        //.withName(getString(R.string.author_name)))
+                        .withName(""))
                 .withOnAccountHeaderListener(new AccountHeader.OnAccountHeaderListener() {
                     @Override
                     public boolean onProfileChanged(View view, IProfile profile, boolean current) {

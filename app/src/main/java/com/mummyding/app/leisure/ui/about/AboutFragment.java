@@ -46,26 +46,26 @@ import java.io.IOException;
  */
 public class AboutFragment extends PreferenceFragment implements Preference.OnPreferenceClickListener{
 
-    private Preference mAppIntro;
-    private Preference mDemoVideo;
+    //private Preference mAppIntro;
+    //private Preference mDemoVideo;
     private Preference mAppVersion;
     private Preference mCheckUpdate;
-    private Preference mStarProject;
+    //private Preference mStarProject;
     private Preference mShare;
-    private Preference mBlog;
-    private Preference mGitHub;
-    private Preference mEmail;
+    //private Preference mBlog;
+    //private Preference mGitHub;
+    //private Preference mEmail;
 
 
-    private final String APP_INTRO = "app_intro";
-    private final String DEMO_VIDEO = "demo_video";
+    //private final String APP_INTRO = "app_intro";
+    //private final String DEMO_VIDEO = "demo_video";
     private final String APP_VERSION = "app_version";
     private final String CHECK_UPDATE = "check_update";
-    private final String START_PROJECT = "star_project";
+    //private final String START_PROJECT = "star_project";
     private final String SHARE = "share";
-    private final String BLOG = "blog";
-    private final String GITHUB = "github";
-    private final String EMAIL = "email";
+    //private final String BLOG = "blog";
+    //private final String GITHUB = "github";
+    //private final String EMAIL = "email";
 
 
     private ProgressBar progressBar;
@@ -74,25 +74,25 @@ public class AboutFragment extends PreferenceFragment implements Preference.OnPr
         super.onCreate(savedInstanceState);
         addPreferencesFromResource(R.xml.about);
 
-        mAppIntro = findPreference(APP_INTRO);
-        mDemoVideo = findPreference(DEMO_VIDEO);
+        //mAppIntro = findPreference(APP_INTRO);
+        //mDemoVideo = findPreference(DEMO_VIDEO);
         mAppVersion = findPreference(APP_VERSION);
         mCheckUpdate = findPreference(CHECK_UPDATE);
-        mStarProject = findPreference(START_PROJECT);
+        //mStarProject = findPreference(START_PROJECT);
         mShare = findPreference(SHARE);
-        mBlog = findPreference(BLOG);
-        mGitHub = findPreference(GITHUB);
-        mEmail = findPreference(EMAIL);
+        //mBlog = findPreference(BLOG);
+        //mGitHub = findPreference(GITHUB);
+        //mEmail = findPreference(EMAIL);
 
-        mAppIntro.setOnPreferenceClickListener(this);
-        mDemoVideo.setOnPreferenceClickListener(this);
+        //mAppIntro.setOnPreferenceClickListener(this);
+        //mDemoVideo.setOnPreferenceClickListener(this);
         mAppVersion.setOnPreferenceClickListener(this);
         mCheckUpdate.setOnPreferenceClickListener(this);
-        mStarProject.setOnPreferenceClickListener(this);
+        //mStarProject.setOnPreferenceClickListener(this);
         mShare.setOnPreferenceClickListener(this);
-        mBlog.setOnPreferenceClickListener(this);
-        mGitHub.setOnPreferenceClickListener(this);
-        mEmail.setOnPreferenceClickListener(this);
+        //mBlog.setOnPreferenceClickListener(this);
+        //mGitHub.setOnPreferenceClickListener(this);
+        //mEmail.setOnPreferenceClickListener(this);
 
         progressBar = (ProgressBar) getActivity().findViewById(R.id.progressbar);
 
@@ -103,13 +103,13 @@ public class AboutFragment extends PreferenceFragment implements Preference.OnPr
     @Override
     public boolean onPreferenceClick(Preference preference) {
 
-        if(mAppIntro == preference){
+        /*if(mAppIntro == preference){
             Intent toIntro = new Intent(getActivity(),AppIntroActivity.class);
             startActivity(toIntro);
         } else if(mDemoVideo == preference){
             Intent toVideo = new Intent(getActivity(),DemoVideoActivity.class);
             startActivity(toVideo);
-        }else if(mCheckUpdate == preference){
+        }else*/ if(mCheckUpdate == preference){
             progressBar.setVisibility(View.VISIBLE);
 
             Request.Builder builder = new Request.Builder();
@@ -134,22 +134,22 @@ public class AboutFragment extends PreferenceFragment implements Preference.OnPr
                 }
             });
 
-        }else if(mStarProject == preference){
+        }/*else if(mStarProject == preference){
             Utils.copyToClipboard(getView(), getString(R.string.project_url));
-        }else if(mShare == preference){
+        }*/else if(mShare == preference){
             Intent sharingIntent = new Intent(android.content.Intent.ACTION_SEND);
             sharingIntent.setType("text/plain");
             sharingIntent.putExtra(android.content.Intent.EXTRA_SUBJECT, "Subject Here");
             sharingIntent.putExtra(android.content.Intent.EXTRA_TEXT, getString(R.string.text_share_info));
             startActivity(Intent.createChooser(sharingIntent, getString(R.string.text_share_leisure)));
 
-        }else if(mBlog == preference){
+        }/*else if(mBlog == preference){
             Utils.copyToClipboard(getView(),getString(R.string.author_blog));
         }else if(mGitHub == preference){
             Utils.copyToClipboard(getView(),getString(R.string.author_github));
         }else if(mEmail == preference){
             Utils.copyToClipboard(getView(),getString(R.string.author_email));
-        }
+        }*/
         return false;
     }
 

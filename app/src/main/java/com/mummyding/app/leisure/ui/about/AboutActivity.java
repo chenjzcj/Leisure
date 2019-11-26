@@ -23,25 +23,15 @@ import android.hardware.Sensor;
 import android.hardware.SensorEvent;
 import android.hardware.SensorEventListener;
 import android.hardware.SensorManager;
-import android.support.design.widget.Snackbar;
-import android.support.v4.app.FragmentManager;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 
 import com.mummyding.app.leisure.R;
 import com.mummyding.app.leisure.support.CONSTANT;
-import com.mummyding.app.leisure.support.HttpUtil;
 import com.mummyding.app.leisure.support.Settings;
 import com.mummyding.app.leisure.support.Utils;
-import com.mummyding.app.leisure.ui.setting.SettingsFragment;
 import com.mummyding.app.leisure.ui.support.SwipeBackActivity;
-import com.squareup.okhttp.Callback;
-import com.squareup.okhttp.Request;
-import com.squareup.okhttp.Response;
-
-import java.io.IOException;
 
 public class AboutActivity extends SwipeBackActivity implements SensorEventListener {
 

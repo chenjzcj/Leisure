@@ -1,27 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
     <PreferenceCategory android:title="@string/app_name">
-        <Preference
+        <!--<Preference
             android:key="app_intro"
-            android:title="@string/text_app_intro"/>
+            android:title="@string/text_app_intro"/>-->
         <Preference
             android:key="app_version"
             android:title="@string/text_current_version"/>
         <Preference
             android:key="check_update"
             android:title="@string/text_check_update"/>
-        <Preference
+        <!--<Preference
             android:key="demo_video"
             android:title="@string/text_demo_video"/>
         <Preference
             android:key="star_project"
             android:title="@string/text_good_job"
-            android:summary="@string/text_good_job_summary"/>
+            android:summary="@string/text_good_job_summary"/>-->
         <Preference
             android:key="share"
             android:title="@string/text_share_leisure" />
     </PreferenceCategory>
-    <PreferenceCategory
+    <!--<PreferenceCategory
         android:title="@string/text_author"
         android:summary="@string/author_name">
         <Preference
@@ -36,9 +36,9 @@
             android:key="email"
             android:title="@string/text_email"
             android:summary="@string/author_email" />
-    </PreferenceCategory>
+    </PreferenceCategory>-->
 
-    <PreferenceCategory
+    <!--<PreferenceCategory
         android:title="@string/text_copyright">
         <Preference
             android:title="@string/text_data"
@@ -52,6 +52,6 @@
 Public License as published by the Free Software Foundation, either version 3 of the License, or
 (at your option) any later version.\n
     Leisure is distributed in the hope that it will be useful,but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more details.\n" />
-    </PreferenceCategory>
+    </PreferenceCategory>-->
 
 </PreferenceScreen>
